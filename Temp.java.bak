@@ -1,0 +1,26 @@
+// It is recomanded to override toString() method,to get meaningfull output
+// In all wrapper classes toString() method is overriden
+
+
+
+import java.util.*;
+class Temp 
+{
+	public static void main(String[] args) 
+	{
+		String s =new String("Durga");
+		System.out.println(s);
+		
+		Integer i = new Integer(10);
+		System.out.println(i);
+		
+		ArrayList l = new ArrayList();
+		l.add("A");
+		l.add("B");
+		System.out.println(l);
+
+		Temp t = new Temp();
+		System.out.println(t);
+
+	}
+}
