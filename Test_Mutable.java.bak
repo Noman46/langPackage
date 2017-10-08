@@ -1,0 +1,16 @@
+class Test_Mutable 
+{
+	public static void main(String[] args) 
+	{
+		String s = new String("I love");
+		   s.concat("JAVA");
+		System.out.println(s); 
+
+	    /*The out put is "I love" Because String is immutable. 
+		We can't change the value of the object once it is created. */
+
+		StringBuffer sb = new StringBuffer("I love");
+		sb.append("Java");
+		System.out.println(sb);
+	}
+}
