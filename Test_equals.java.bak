@@ -1,0 +1,35 @@
+// Other then muatability String and StringBuffer has another difference
+// In string Class .equals() method is overriden for content comparison.
+// In StringBuffer class .equals () method is not overriden
+
+
+
+class Test_equals 
+{
+	public static void main(String[] args) 
+	{
+		String s = new String("Noman");
+		String s1 = new String("Noman");
+		System.out.println(s==s1);
+
+		// The out put is false, because "==" meant for reference comparison
+		// Not for content comparison
+		System.out.println(s.equals(s1));
+
+		// The output is "TRUE", Because In String class .equals 
+		// method is overriden for content comparison.
+		// s and s1 both are having same content "Noman"
+		// So .equals() returns TRUE for that
+
+		StringBuffer sb= new StringBuffer("Noman");
+        StringBuffer sb1= new StringBuffer("Noman");
+        System.out.println(sb==sb1);
+
+		// The out put is false, because "==" meant for reference comparison
+		// Not for content comparison
+
+		System.out.println(sb.equals(sb1));
+
+
+	}
+}
