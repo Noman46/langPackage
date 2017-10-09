@@ -1,0 +1,26 @@
+Now here I am going to discuss about some the very important constructor that String Class has.
+
+1) String s = new String();
+   
+      This is an empty String object, which is not containing any value. There is a mis conception 
+about String s=""; and String s = null;. The first one is an empty string onject where the object exists.
+But the second one is null means there is no String object there. 
+To describe emptyness we must have something that can contain.
+Like there is a jar but the jar is empty. 
+First example reflects this idea where there is an object of string but that object does
+not contain anything. But for the second example Even the Jar is unavailable.
+
+2) String s = new String(String literal);
+    This is for containing any string value. 
+
+3)string s= new String(StringBuffer sb);
+   
+    For a given stringBuffer object create an string object. This helps to convert StringBuffer into 
+String. Or other waya we can say tgo convert mutability into immutability
+
+
+4)String s = new String( char [] ch);
+  For a given char array to convert into an string object.
+
+5) String s = new String(byte[] b);
+  For a given byte array to convert into an string object.
