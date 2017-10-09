@@ -1,0 +1,17 @@
+class  charectarTest
+{
+	public static void main(String[] args) 
+	{
+		char [] ch = {'i','l','o','v','e','j','a','v','a'};
+		String s = new String(ch);
+		System.out.println(s);
+
+		// The output is "ilovejava". char[] ch converts into an string
+
+		byte [] b = {110,111,109,97,110};
+		String s1 = new String(b);
+		System.out.println(s1);
+		// the output will be "noman". Because the numeric value will converted into ASCII value.
+
+	}
+}
