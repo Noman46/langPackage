@@ -1,0 +1,33 @@
+class StringMethodTest 
+{
+	public static void main(String[] args) 
+	{
+		String s= new String("Noman Is tring Hard");
+		char c=s.charAt(3); // takes an integer value and returns a character of that integer index number
+		System.out.println(c); // returns 'a' as java index stars from '0'
+
+		s=s.concat(" to master java"); // takes  string as param and concat (add) it to the previous string
+		System.out.println(s);
+
+		String s1= new String("Noman");
+		String s2= new String("NOMAN");
+		System.out.println(s1.equals(s2)); // returns false. string class equals method is overriden to compare content of an object
+		// But this equals method is case sensitive. That is why it returns false.
+
+		System.out.println(s1.equalsIgnoreCase(s2));  // returns "TRUE". This method does not bother by case
+
+		System.out.println(s.substring(3)); // The out put is "an Is tring Hard to master java". It creats a substring of a given string
+		System.out.println(s.substring(3,7)); // The output is "an I" . It genarets a sbstring between the given integer.
+		System.out.println(s.length()); // Prints the total number of character of a string. 
+		System.out.println(s1.replace('N','x')); // This method replace a char with another char
+
+		String s3= new String("         NOMAN       "); // this print the value with existing white spaces
+        System.out.println(s3);
+		System.out.println(s3.trim()); // trim() method remove all the white spaces from the infront of any String and also from the end
+		System.out.println(s3.indexOf('M')); // Prints the index number of a char
+		System.out.println(s3.lastIndexOf('N'));  // prints the index number of a char where it last occered
+		System.out.println(s2.toLowerCase());  // convert an upper case string to lower case
+		System.out.println(s.toUpperCase());
+
+	}
+}
