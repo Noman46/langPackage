@@ -1,0 +1,41 @@
+There are severel important method in sting Class which are listed below
+
+1) Public char charAt(int index);
+   To find the character in a specific index position
+
+2) public String concat(string s);
+   To joint two string
+
+3) public boolean equals( object o);
+   As we know string class equals method is overriden o compare content not the reference
+ this method compare two string respective to case. So it is a case sensitive method
+
+4) public boolean equalsIgnoreCase(String s);
+  It alse compare two string but irrespective of there case. So it is not case sensitive
+
+5)public String substring(int begin);
+ It generets a substring of a given strin. Take parameters as int and starts the substring from that position
+here one think should be noticed the "S" of substring is not capital.
+
+6) public string substring(int begin, int end)
+It works same as substring but it has a bound within which the substring will be generated.
+
+7) public int length();
+It provides the total number of character a string has. But point to be noted my lord, there is another same word in java as
+length which is used for Array to find the length but length() is a method which is used for only string object.
+
+8) public String replace(char oldch, char new ch);
+ It repalces a specific character from a string with a new given character.
+
+9)public String trim();
+ Works to vanish all the white spaces infront of String and at the ending. But it does not
+work for removing spaces from the middle of any string. For that we have to override the method 
+
+10) public int indexOf(char ch);
+ It returns the index number of a given character.
+
+11) oublic String toLowerCase();
+ It converts any string to lower case
+
+12) public string touUpperCase();
+ it converts any String to upper case. 
