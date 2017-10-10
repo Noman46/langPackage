@@ -1,0 +1,35 @@
+----------------- IMMUTABILITY-----------------
+
+Immutable means unchangable. Once we creat an object we cant change the value of that object.
+If there is any change to the value there will be a new object will be created in the  heap area 
+with those changes. If there is no change then existing object will be reused 
+
+String s1 = new string("Noman");
+String s2 = s1.toUpperCase(); // A new object will be created with this change but the previous object will be there for future use
+String s3= s1.toLowerCase(); // The lower case version was thre before. so no new object will be craeted rather existing object will be reused
+
+This above example shows the immutability of String Class.
+
+Immutability defends new object creation if the object value is same
+But performance wise immutability is not recomanded
+
+There is a difference between final and immutability
+
+Final is for variable not for object
+Immutability is for object not for variable
+
+Once we declare any variable final reassingment to that variable is impossible
+Once we make any class immutable then duplicate object creation is not possible
+
+condider the following example
+
+final StringBuffer sb = new stringBuffer("Noman");
+      sb.append("Loves Java");
+System.out.println(sb);
+
+In this case as stringBuffer is a mutable class no new object will be created, rather
+the new value "Loves Java" will be adde with "Noman" and sb referencing the same object. Here Final
+does not make StringBuffer Immutable. Because Final works for variable not for object.
+ So where is the im[pact of final. Final prevents sb to reassingnment abain
+we cannot declare sb = new StringBuffer("Ilias")
+That means Final prevent reassingment to the repective reference variable sb
