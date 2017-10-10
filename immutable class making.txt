@@ -4,7 +4,7 @@
  That is because The class must be declared "FINAL"*/
 
  // We have to declare all variable private and final. So there state can not be changed.
- //
+ // There will be no setter method to manupulate the data by user
 
  
  
