@@ -1,0 +1,58 @@
+ // Creating my own Immutable class.
+ /*1st we have to make our class final. There is method modify in our class.
+ we do not want to any other class extends our class and by overridding our method modif() to change its logics.
+ That is because The class must be declared "FINAL"*/
+
+ // We have to declare all variable private and final. So there state can not be changed.
+ //
+
+ 
+ 
+ 
+ 
+ 
+ 
+ final class ImmutabilityTest 
+{
+	private final int i;
+	
+	ImmutabilityTest(int i){
+	
+	   this.i=i;
+	
+	}
+
+	public ImmutabilityTest modify(int i){
+	
+	   if(this.i==i)
+		{return this;}
+	   else{
+	   
+	     return(new ImmutabilityTest(i));
+	   
+	   }
+
+	
+	}
+
+	
+	
+	
+	
+	
+	public static void main(String[] args) 
+	{
+		ImmutabilityTest t1 = new ImmutabilityTest(10);
+		ImmutabilityTest t2 = t1.modify(100);
+		ImmutabilityTest t3= t1.modify(10);
+
+	    System.out.println(t1==t2); // This retrurn False,as because first t1 object is created with value 10.
+		                            //When we call the modify method and give it the value 100 it comare the value with the privious t1 and find no similarity
+									// So it creates new object with new reference. So there is no way that t1 and t2 can be same.
+		
+		
+		System.out.println(t1==t3); // It returns true. Because modify method contains 10. That is exactly the same value the t1 has at the very first. So there
+		                            // is no need to create new object hust reuse the existing same object. so t3 truly refering the t1 object. so there reference vcalue must be same.
+									// That is why it returns TRUE
+	}
+}

@@ -1,0 +1,38 @@
+ final class ImmutabilityTest 
+{
+	private int i;
+	
+	ImmutabilityTest(int i){
+	
+	   this.i=i;
+	
+	}
+
+	public ImmutabilityTest modify(int i){
+	
+	   if(this.i==i)
+		{return this;}
+	   else{
+	   
+	     return(new ImmutabilityTest(i));
+	   
+	   }
+
+	
+	}
+
+	
+	
+	
+	
+	
+	public static void main(String[] args) 
+	{
+		ImmutabilityTest t1 = new ImmutabilityTest(10);
+		ImmutabilityTest t2 = t1.modify(100);
+		ImmutabilityTest t3= t1.modify(10);
+
+	    System.out.println(t1==t2);
+		System.out.println(t1==t3);
+	}
+}
