@@ -1,0 +1,28 @@
+1) What is awrapper class?
+
+Wrapper means wrape something with a cover or packet. We have a chocolate and we cover it with a
+packet. Now in java we have primtive Data type. But java is purely object oriented language. So we need
+to convert those primtive ttype into object type. Wrapper class actualy convert those primtive into object
+type.
+
+lete consider the following example.
+                   
+                    ArrayList l= new ArrayList();
+                          l.add(10);
+for this compiler will give an error. Because Arraylist is an object but '10' is an primtive. We cant fit
+primtive into object.
+                  Integer i = new Integer(10);
+                          l.add(i);
+In this case the code happily compile. Because Integer class convert the integer value 10 into an integer object.
+
+There are 8 wrapper class in java. They are listed below.
+                 1)Integer
+                 2)Long
+                 3)short
+		 4)Byte
+		 5)Character
+                 6)Boolean
+                 7)Float
+                 8)Double
+
+So the basic purpose of wrapper class is to convert primtive into object type
