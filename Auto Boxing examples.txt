@@ -1,0 +1,35 @@
+class Test
+{
+	public static void main(String[] args) 
+	{
+		Integer x=new Integer(10);
+        Integer y= new Integer(10);
+		System.out.println(x==y);// false... Because x and y is the different object. And == meant for reference comparision
+
+
+		System.out.println(x.equals(y)); // true... Because all immutable class override equals() method to compare content
+   //---------------------------------------------------------------
+        
+		Integer i=new Integer(10);
+		Integer j=10;
+		System.out.println(i==j); // False ... because first is the programmer's create object and second one is auto Boxing. two different concept
+		System.out.println(i.equals(j));// True... becase just compare the content
+//---------------------------------------------------------------------
+
+
+		Integer a=10;
+		Integer b=10;
+		System.out.println(a==b);// true because while doing autoBoxing jvm check wheather there is an object with the same value, if there jvm does not creat new object rather use the old one
+		System.out.println(a.equals(b));// true ... beacuse just compare the content
+//----------------------------------------------------------------------
+
+
+		
+		Integer I=1000;
+		Integer J=1000;
+		System.out.println(I==J); // false...
+
+		System.out.println(I.equals(J));//True... 
+
+	}
+}
