@@ -1,0 +1,68 @@
+// example of Shallow cloning
+
+
+
+
+
+class Cat 
+{
+
+    int j;
+	Cat(int j){
+	
+	  this.j=j;
+	
+	}
+
+
+}
+
+class Dog implements Cloneable // Cloneable iterface has no method.. it is amarkup interface
+{
+     int i;
+	 Cat c;
+	 Dog(Cat c, int i) // Dog object needs cat object to be created
+	{
+	 
+	  this.c=c;
+	  this.i=i;
+	 
+	}
+
+	public Object clone() throws CloneNotSupportedException // clone method throws checked exception CloneNotSupported. And I don not want to handle it, thats why use throws keyword
+	{
+	
+	   return super.clone();
+	
+	}
+
+}
+
+class TestShallow
+{
+
+	public static void main(String [] args) throws CloneNotSupportedException
+	{
+	   Cat c = new Cat(10); // Creating Cat object.
+	   
+	   Dog d1 = new Dog(c,20); // Creating Dog object
+	   
+	   System.out.println(d1.c.j +"....." +d1.i); // Printhing the value of d1 object... '10....20'
+
+	   
+	   Dog d2= (Dog)d1.clone(); // cretaing d2 dog object
+	   
+	   System.out.println(d2.c.j +"....." +d2.i); // printing the value.. The value is as same as d1  "10....20"
+	   
+	   d2.c.j=20; // assingning new value to j which is under cat object
+	   
+		System.out.println(d2.c.j +"....." +d2.i);  /* the new value of j has changed and print "20.....20" so the cloned method is changed. 
+		                                             Lets see the original object is changed or not. */
+		
+		System.out.println(d1.c.j +"....." +d1.i); /* as we know here it is not wanted that the original object will changed. 
+		                                            but as the d2 is chjanged the original  object is change too. This is called shallow cloning*/
+
+	   
+	
+	}
+}
