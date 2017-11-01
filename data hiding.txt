@@ -1,0 +1,65 @@
+// This is an example of Data hiding
+
+
+
+package noman.oops.datahiding;
+
+public class Account {
+
+	
+	private static double balance; // This is a private field
+	
+	// to access that field we need to create getter and setter method
+	
+	public static double getBalance() {   // getter method has exact return type as for the corresponding data field
+		return balance;  // returns balance
+	}
+
+// It is a setter method to set value for the private data field	
+	
+	public static void setBalance(double balance) {  // setter method does not return any thing, but it contains parameters as same the field has
+		Account.balance = balance;
+	}
+	
+	
+}
+
+
+// this class is for handle the private data
+
+
+package noman.oops.datahiding;
+import java.util.Scanner;
+
+public class accountChange extends Account {
+	
+	private static int password =1234;
+	
+	public static void main(String[] argt)
+	{
+		int password=0;
+		System.out.println("Enter your password: ");
+		Scanner sc = new Scanner(System.in);
+		
+		password= sc.nextInt();
+		double balance=0.0;
+		Scanner sc1 = new Scanner(System.in);
+		
+		    if (password==accountChange.password)
+		    {
+		    	System.out.println("Enter your balance: " );
+		    	balance=sc1.nextDouble();
+		    	Account.setBalance(balance);
+		    	System.out.println("Your present balance is:" +Account.getBalance());
+		    	
+		    }
+		    else {
+		    	
+		    	System.out.println("your pass word is incorect " );
+		    }
+		
+		
+		
+	}
+	
+}
